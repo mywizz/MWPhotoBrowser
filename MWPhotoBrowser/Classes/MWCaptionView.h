@@ -11,6 +11,8 @@
 
 @interface MWCaptionView : UIToolbar
 
+@property (nonatomic, strong) UIFont *captionFont;
+
 // Init
 - (id)initWithPhoto:(id<MWPhoto>)photo;
 

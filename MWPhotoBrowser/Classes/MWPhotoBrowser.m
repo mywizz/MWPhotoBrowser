@@ -664,6 +664,7 @@
             if ([photo caption]) captionView = [[MWCaptionView alloc] initWithPhoto:photo];
         }
     }
+	captionView.captionFont = self.captionFont;
     captionView.alpha = [self areControlsHidden] ? 0 : 1; // Initial alpha
     return captionView;
 }

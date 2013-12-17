@@ -21,6 +21,8 @@ static const CGFloat labelPadding = 10;
 
 @implementation MWCaptionView
 
+@synthesize captionFont = _captionFont;
+
 - (id)initWithPhoto:(id<MWPhoto>)photo {
     self = [super initWithFrame:CGRectMake(0, 0, 320, 44)]; // Random initial frame
     if (self) {
@@ -82,5 +84,15 @@ static const CGFloat labelPadding = 10;
     [self addSubview:_label];
 }
 
+- (void)setCaptionFont:(UIFont *)captionFont
+{
+	_captionFont = captionFont;
+	_label.font = captionFont;
+}
+
+- (UIFont *)captionFont
+{
+	return _captionFont;
+}
 
 @end

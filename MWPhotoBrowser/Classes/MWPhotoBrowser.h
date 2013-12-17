@@ -48,6 +48,7 @@
 @property (nonatomic) BOOL enableGrid;
 @property (nonatomic) BOOL startOnGrid;
 @property (nonatomic, readonly) NSUInteger currentIndex;
+@property (nonatomic, strong) UIFont *captionFont;
 
 // Init
 - (id)initWithPhotos:(NSArray *)photosArray  __attribute__((deprecated("Use initWithDelegate: instead"))); // Depreciated
