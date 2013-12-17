@@ -70,6 +70,7 @@
     _viewIsActive = NO;
     _enableGrid = YES;
     _startOnGrid = NO;
+	_initialFullScreen = NO;
     _visiblePages = [[NSMutableSet alloc] init];
     _recycledPages = [[NSMutableSet alloc] init];
     _photos = [[NSMutableArray alloc] init];
@@ -362,7 +363,14 @@
     [self.navigationController setToolbarHidden:YES];
     
     // Update UI
-	[self hideControlsAfterDelay];
+	if (_initialFullScreen)
+	{
+		[self setControlsHidden:YES animated:NO permanent:NO];
+	}
+	else
+	{
+		[self hideControlsAfterDelay];
+	}
     
     // Initial appearance
     if (!_viewHasAppearedInitially) {
